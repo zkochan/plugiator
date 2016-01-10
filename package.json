@@ -1,0 +1,40 @@
+{
+  "name": "plugiator",
+  "version": "0.0.0",
+  "description": "hapi plugins creator",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "mocha test/{**/,/}*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zkochan/plugiator.git"
+  },
+  "keywords": [
+    "hapi",
+    "plugin",
+    "plugins"
+  ],
+  "author": {
+    "name": "Zoltan Kochan",
+    "email": "zoltan.kochan@gmail.com",
+    "url": "http://kochan.io"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zkochan/plugiator/issues"
+  },
+  "homepage": "https://github.com/zkochan/plugiator#readme",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "sinon": "^1.17.2",
+    "sinon-chai": "^2.8.0"
+  }
+}
