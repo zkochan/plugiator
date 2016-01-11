@@ -1,6 +1,6 @@
 {
   "name": "plugiator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "hapi plugins creator",
   "main": "index.js",
   "files": [
