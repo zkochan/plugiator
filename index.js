@@ -18,9 +18,9 @@ function anonymous(fn) {
   return create(name, fn)
 }
 
-let noopPlugin = (server, opts, next) => next()
-
 function noop(name) {
+  let noopPlugin = (server, opts, next) => next()
+
   if (!name) return anonymous(noopPlugin)
 
   return create(name, noopPlugin)

@@ -70,6 +70,14 @@ describe('plugiator', function() {
     expect(noopSpy).to.have.been.calledWithExactly()
   })
 
+  it('should create several noop plugins', function() {
+    let plugin1 = plugiator.noop('noop1')
+    let plugin2 = plugiator.noop('noop2')
+
+    expect(plugin1.attributes.name).to.eq('noop1')
+    expect(plugin2.attributes.name).to.eq('noop2')
+  })
+
   it('should create anonymous noop plugin', function() {
     let plugin = plugiator.noop()
 
