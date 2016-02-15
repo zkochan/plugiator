@@ -9,14 +9,14 @@ A hapi plugins creator
 
 ## How to install it?
 
-```
-$ npm install --save plugiator
+``` sh
+npm install --save plugiator
 ```
 
 
 # Usage
 
-## plugiator.create
+## `plugiator.create(attributes, register)`
 
 Creates a plugin with the passed in attributes and register function.
 
@@ -38,7 +38,7 @@ module.exports = plugiator.create('foo', register)
 ```
 
 
-## plugiator.anonymous
+## `plugiator.anonymous(register)`
 
 Creates a plugin with the passed in register function and random attributes.
 Might be useful for unit tests.
@@ -53,7 +53,7 @@ module.exports = plugiator.anonymous(register)
 ```
 
 
-## plugiator.noop
+## `plugiator.noop([attributes])`
 
 Creates a plugin that does nothing.
 
@@ -72,4 +72,4 @@ module.exports = plugiator.noop({
 
 ## License
 
-The MIT License (MIT)
+MIT © [Zoltan Kochan](https://github.com/zkochan)
