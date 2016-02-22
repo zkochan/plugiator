@@ -72,4 +72,4 @@ module.exports = plugiator.noop({
 
 ## License
 
-MIT © [Zoltan Kochan](https://github.com/zkochan)
+MIT © [Zoltan Kochan](https://www.kochan.io)
