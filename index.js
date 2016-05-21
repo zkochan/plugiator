@@ -15,9 +15,9 @@ export function create(attributes, fn) {
 
 export const anonymous = fn => create(`test-${Math.random()}`, fn)
 
-const noopPlugin = (server, opts, next) => next()
-
 export function noop(name) {
+  const noopPlugin = (server, opts, next) => next()
+
   if (!name) return anonymous(noopPlugin)
 
   return create(name, noopPlugin)

@@ -1,6 +1,6 @@
 const sinon = require('sinon')
 const chai = require('chai')
-import * as plugiator from '..'
+import * as plugiator from '../index'
 const expect = chai.expect
 
 chai.use(require('sinon-chai'))
@@ -80,5 +80,12 @@ describe('plugiator', function() {
     plugin({}, {}, noopSpy)
 
     expect(noopSpy).to.have.been.calledWithExactly()
+  })
+
+  it('should create anonymous noop plugins with different names', function() {
+    const plugin1 = plugiator.noop()
+    const plugin2 = plugiator.noop()
+
+    expect(plugin1.attributes.name).to.not.eq(plugin2.attributes.name)
   })
 })
