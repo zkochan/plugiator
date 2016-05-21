@@ -1,7 +1,6 @@
-'use strict'
 const sinon = require('sinon')
 const chai = require('chai')
-const plugiator = require('../')
+import * as plugiator from '..'
 const expect = chai.expect
 
 chai.use(require('sinon-chai'))

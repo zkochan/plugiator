@@ -8,24 +8,17 @@ function toAttr(attributes) {
   }
 }
 
-function create(attributes, fn) {
+export function create(attributes, fn) {
   fn.attributes = toAttr(attributes)
   return fn
 }
 
-function anonymous(fn) {
-  let name = 'test-' + Math.random()
-  return create(name, fn)
-}
+export const anonymous = fn => create(`test-${Math.random()}`, fn)
 
-let noopPlugin = (server, opts, next) => next()
+const noopPlugin = (server, opts, next) => next()
 
-function noop(name) {
+export function noop(name) {
   if (!name) return anonymous(noopPlugin)
 
   return create(name, noopPlugin)
 }
-
-exports.anonymous = anonymous
-exports.create = create
-exports.noop = noop
