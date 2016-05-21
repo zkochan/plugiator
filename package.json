@@ -1,6 +1,6 @@
 {
   "name": "plugiator",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "hapi plugins creator",
   "main": "dist/index.js",
   "jsnext:main": "index.js",
